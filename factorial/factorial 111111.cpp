@@ -1,28 +1,25 @@
 #define _CRT_SECURE_NO_WARNINGS 
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-	double k, answer = 1;
-	printf("factorial calculator : ");
-	scanf("%lf", &k);
-	printf("Ansewer = ");
-	if (k > 0)
+	int a, b = 1, c = 0;
+	printf("Enter number : ");
+	scanf("%d", &a);
+	while (b < a)
 	{
-		while (k >= 1)
+		if (a % b == 0)
 		{
-
-			answer = answer * k;
-			k = k - 1;
-
+			c = c + b;
+			b = b + 1;
 		}
-		printf("%.0lf", answer);
+		else
+		{
+			b = b + 1;
+		}
 	}
-	else if (k == 0)
+	if (a = b)
 	{
-		printf(" 1 ");
+		printf("%d", c);
 	}
-	else if (k < 0)
-	{
-		printf(" _!@# ERROR #@!_ ");
-	}
+	return 0;
 }
